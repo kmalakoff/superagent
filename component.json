@@ -2,7 +2,7 @@
   "name": "superagent-ls",
   "repo": "kmalakoff/superagent-ls",
   "description": "Superagent with less suck - (browser HTTP client)",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "keywords": [
     "http",
     "ajax",
