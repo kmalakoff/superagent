@@ -4,8 +4,8 @@ language: node_js
 
 env:
   global:
-    - secure: j5T587q9LQWfbn11/dNTRnGnuy79CFR//WYkfEErHV5CO5Sj0RsS+FwWp5cFZJm2opmMHXcdsJRgca7qI355R4/iA64lu4mTmQBc/vGrqestXc9/ppViavBg3MiiRJ5visuUt7yPzlXKzSaLBwmCjBUhrMMTYD7BzMggce+c03U=
-    - secure: gzv2N/M1hp+cxYBhcLgKQ6aq0l5WmRlgG+ZLJN0V4TWfG7tnd5A8fpVhQWlaI38TeqNVvNH9YVg4FvcbOTEMTM0mbgWXYinnGWzSKVWsiQMmFMWXRkFTUt5R9fuuRgx/pMYifI6NsDbpwtyF/PMLG/vA0yjo5jRQRky+OgxwPj4=
+    - secure: ewlU1jjDXKiFfgNqNfxJiMee0+eIJVP87aJmu1vbqTEubE2ibxZkdu5o3LJXbVkRVZreM0obYmxDpdZQD7SOx29bkxyeqCwTn70FOnmQgd0y9BdHcuKCLFidHRIY78mlb2d40l0XeZHhwgwo+pXFY/j5uh1v2z/sTcaH5yosuDQ=
+    - secure: ARIikFoe3Q8YZgqgtAAuKhLFNZA38lcq8BOFzrl8KhOv6eAvvE3HQp2opYWAOQCvzHRzFbh3mdqnC6PXnybSOygI7bRv7T81iVjyk2JDlK8gR1+ElswQv4TG/xlEPIoR/bN30IsCnCayz9RwcWhl5fnetYlXG+bX6FQd43uYNkY=
 
 matrix:
   include:
