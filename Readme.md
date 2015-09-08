@@ -29,7 +29,7 @@ request
   .set('X-API-Key', 'foobar')
   .set('Accept', 'application/json')
   .end(function(err, res){
-
+    // Calling the end function will send the request
   });
 ```
 
@@ -51,14 +51,13 @@ Even though IE9 is supported, a polyfill `window.btoa` is needed to use basic au
 Superagent is easily extended via plugins.
 
 ```js
-var nocache = require('no-cache');
+var nocache = require('superagent-no-cache');
 var request = require('superagent');
 var prefix = require('superagent-prefix')('/static');
 
-prefix(request); // Prefixes *all* requests
-
 request
 .get('/some-url')
+.use(prefix) // Prefixes *only* this request
 .use(nocache) // Prevents caching of *only* this request
 .end(function(err, res){
     // Do something
@@ -69,6 +68,7 @@ Existing plugins:
  * [superagent-no-cache](https://github.com/johntron/superagent-no-cache) - prevents caching by including Cache-Control header
  * [superagent-prefix](https://github.com/johntron/superagent-prefix) - prefixes absolute URLs (useful in test environment)
  * [superagent-mock](https://github.com/M6Web/superagent-mock) - simulate HTTP calls by returning data fixtures based on the requested URL
+ * [superagent-mocker](https://github.com/rambler-digital-solutions/superagent-mocker) — simulate REST API
 
 Please prefix your plugin with `superagent-*` so that it can easily be found by others.
 

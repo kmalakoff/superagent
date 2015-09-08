@@ -1,3 +1,9 @@
+# 1.3.0 (2015-08-05)
+
+ * fix incorrect content-length of data set to buffer
+ * serialize request data takes into account charsets
+ * add basic promise support via a `then` function
+
 # 1.2.0 (2015-04-13)
 
  * add progress events to downlodas

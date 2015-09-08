@@ -17,6 +17,7 @@ else {
 }
 
 describe('request', function(){
+  this.timeout(10000);
 
   describe('with a callback', function(){
     it('should invoke .end()', function(done){
@@ -279,6 +280,28 @@ describe('request', function(){
         done();
       })
       .end();
+    })
+  })
+
+  describe('.then(fulfill, reject)', function() {
+    it('should support successful fulfills with .then(fulfill)', function(done) {
+      request
+      .post(uri + '/echo')
+      .send({ name: 'tobi' })
+      .then(function(res) {
+        res.text.should.equal('{"name":"tobi"}');
+        done();
+      })
+    })
+
+    it('should accept a completed request with .then(fulfill, null)', function(done) {
+      request
+      .get(uri + '/error')
+      .then(function(res) {
+        assert(res.status == 500);
+        assert(res.text == 'boom');
+        done();
+      }, null)
     })
   })
 
