@@ -1,6 +1,10 @@
 superagent-ls
 ==================
 
+# 1.3.0 (2015-09-07)
+
+ * merged superagent 1.3.0
+
 # 1.2.0 (2015-04-19)
 
  * merged superagent 1.2.0
@@ -12,6 +16,11 @@ superagent-ls
 
 superagent
 ==================
+# 1.3.0 (2015-08-05)
+
+ * fix incorrect content-length of data set to buffer
+ * serialize request data takes into account charsets
+ * add basic promise support via a `then` function
 
 # 1.2.0 (2015-04-13)
 

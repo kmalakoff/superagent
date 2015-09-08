@@ -1,6 +1,9 @@
 var assert = require('assert');
 var request = require('../../');
 
+describe('request', function() {
+  this.timeout(10000);
+
 it('Request inheritance', function(){
   assert(request.get('/') instanceof request.Request);
 });
@@ -351,6 +354,17 @@ it('POST json default', function(next){
   });
 });
 
+it('POST json contentType charset', function(next){
+  request
+  .post('/echo')
+  .set('Content-Type', 'application/json; charset=UTF-8')
+  .send({ data: ['data1', 'data2'] })
+  .end(function(err, res){
+    assert('{"data":["data1","data2"]}' == res.text);
+    next();
+  });
+});
+
 it('POST multiple .send() calls', function(next){
   request
   .post('/pet')
@@ -654,3 +668,5 @@ if ('FormData' in window) {
     .end();
   });
 }
+
+});
